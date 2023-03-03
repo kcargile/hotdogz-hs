@@ -15,6 +15,7 @@
 .pnp.js
 .turbo
 .vercel
+.vscode
 .wip
 /.next/
 /out/
