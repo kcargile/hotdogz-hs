@@ -1,0 +1,15 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home
+  screenshotPath: ../images/template-previews/homepage.png
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+    <div class="body-container body-container--home">
+        {% dnd_area "dnd_area" label="Main content" %}
+            {% include_dnd_partial path="../sections/hero.html" context={ "title": "Sick 'Em! With a good title, that is." } %}
+            {% include_dnd_partial path="../sections/dogs.html" %}
+        {% end_dnd_area %}
+    </div>
+{% endblock body %}

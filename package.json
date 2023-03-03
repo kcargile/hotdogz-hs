@@ -1,0 +1,17 @@
+{
+    "name": "hs-cert",
+    "version": "1.0.0",
+    "description": "HubSpot CMS developer cert project",
+    "main": "index.js",
+    "author": "Kristopher Cargile <k@algorythmic.com>",
+    "license": "MIT",
+    "private": true,
+    "prettier": "@algorythmic/prettier-config/prettier-config.json",
+    "devDependencies": {
+        "@hubspot/cli": "^4.1.6"
+    },
+    "dependencies": {
+        "@algorythmic/prettier-config": "^2.1.3",
+        "prettier": "^2.8.4"
+    }
+}

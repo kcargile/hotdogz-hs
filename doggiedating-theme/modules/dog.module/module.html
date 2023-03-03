@@ -1,0 +1,21 @@
+<div class="dogs">
+    {% for dog in module.dog %}
+        <section class="dogs__card card">
+            {% if dog.image.src %}
+                {% set sizeAttrs = 'width="{{ dog.image.width }}" height="{{ dog.image.height }}"' %}
+                {% if dog.image.size_type == "auto" %}
+                    {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif dog.image.size_type == "auto_custom_max" %}
+                    {% set sizeAttrs = 'width="{{ dog.image.max_width }}" height="{{ dog.image.max_height }}" style="max-width: 100%; max-height: auto;"' %}
+                {% endif %}
+                {% set loadingAttr = dog.image.loading != "disabled" ? 'loading="{{ dog.image.loading }}"' : "" %}
+                <img class="dog__image" src="{{ dog.image.src }}" alt="{{ dog.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+            {% if dog.text %}
+                <div class="dog__text">
+                    {{ dog.text }}
+                </div>
+            {% endif %}
+        </section>
+    {% endfor %}
+</div>

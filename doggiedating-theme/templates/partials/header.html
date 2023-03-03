@@ -1,0 +1,22 @@
+<!--
+  templateType: global_partial
+  label: Global Header
+-->
+<header class="header">
+	<div class="header__container content-wrapper">
+    	<div class="header__column">
+			<div class="header__row-1">
+    			{% module "site_title" path="@hubspot/rich_text" html="<h1>Add a title here</h1>" %}
+			</div>
+			<div class="header__row-2">
+				{% module "site_description" path="@hubspot/rich_text" html="<h4><em>You might also consider adding an inspriational quote.</em> - Your Boss</h4>" %}
+			</div>
+            <div class="header__navigation header--element">
+                {% set default_node = menu("Main Navigation") %}
+                {% for child in default_node.children %}
+                    <a href={{child.url}}>{{ child.label }}</a>&nbsp;&nbsp;
+                {% endfor %}
+            </div>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,31 @@
+[
+    {
+        "label": "Dog",
+        "name": "dog",
+        "type": "group",
+        "occurrence": {
+            "default": 3,
+            "min": 1,
+            "sorting_label_field": "dog.text"
+        },
+        "children": [
+            {
+                "label": "Image",
+                "name": "image",
+                "type": "image",
+                "responsive": true,
+                "resizable": true,
+                "show_loading": true,
+                "default": {
+                    "loading": "lazy"
+                }
+            },
+            {
+                "label": "Name",
+                "name": "text",
+                "type": "richtext",
+                "default": "<h4>Pup's name</h4>"
+            }
+        ]
+    }
+]

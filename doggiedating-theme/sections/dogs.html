@@ -1,0 +1,58 @@
+<!--
+  templateType: section
+  label: Dogs
+  isAvailableForNewContent: true
+  description: "A list of currently available dogs"
+-->
+{% dnd_section background_color={{ context.background_color or "#ffffff" }}, vertical_alignment="TOP" %}
+    {% dnd_column %}
+        {% dnd_row %}
+            {% dnd_module "team_title" path="@hubspot/rich_text" html="<h2>The Litter</h2>" %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row max-width={ 
+            "mobile": "900px"
+            }  
+        %}
+            {% dnd_module
+                path="../modules/dog",
+                dog=[
+                {
+                  "image": {
+                    "alt": context.dog_one_image_alt or "A dog",
+                    "loading": context.dog_two_image_loading or "disabled",
+                    "max_height": context.dog_two_image_height or 753,
+                    "max_width": context.dog_two_image_width or 753,
+                    "size_type": "auto_custom_max",
+                    "src": context.dog_one_image or get_asset_url("../images/dogs/porter.png")
+                  },
+                  "text": context.dog_one_name or "<h4>A dog</h4>"
+                },
+                {
+                  "image": {
+                    "alt": context.dog_two_image_alt or "A dog",
+                    "loading": context.dog_two_image_loading or "disabled",
+                    "max_height": context.dog_two_image_height or 753,
+                    "max_width": context.dog_two_image_width or 753,
+                    "size_type": "auto_custom_max",
+                    "src": context.dog_one_image or get_asset_url("../images/dogs/porter.png")
+                  },
+                  "text": context.dog_two_name or "<h4>A dog</h4>"
+                },
+                {
+                  "image": {
+                    "alt": context.dog_three_image_alt or "A dog",
+                    "loading": context.dog_three_image_loading or "disabled",
+                    "max_height": context.dog_three_image_height or 753,
+                    "max_width": context.dog_three_image_width or 753,
+                    "size_type": "auto_custom_max",
+                    "src": context.dog_one_image or get_asset_url("../images/dogs/porter.png")
+                  },
+                  "text": context.dog_three_name or "<h4>A dog</h4>"
+                }
+              ]
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+    {% end_dnd_column %}
+{% end_dnd_section %}

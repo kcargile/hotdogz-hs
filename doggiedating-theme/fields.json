@@ -1,0 +1,45 @@
+[
+    {
+        "label": "Colors",
+        "name": "global_colors",
+        "type": "group",
+        "children": [
+            {
+                "label": "Accent",
+                "name": "accent",
+                "type": "color",
+                "visibility": {
+                    "hidden_subfields": {
+                        "opacity": true
+                    }
+                },
+                "default": {
+                    "color": "#d3d3d3"
+                }
+            }
+        ]
+    },
+    {
+        "label": "Fonts",
+        "name": "global_fonts",
+        "type": "group",
+        "children": [
+            {
+                "label": "Accent",
+                "name": "accent",
+                "type": "font",
+                "visibility": {
+                    "hidden_subfields": {
+                        "size": true,
+                        "styles": true
+                    }
+                },
+                "default": {
+                    "fallback": "sans-serif",
+                    "font": "Helvetica",
+                    "font_set": "GOOGLE"
+                }
+            }
+        ]
+    }
+]

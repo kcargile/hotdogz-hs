@@ -1,0 +1,6 @@
+.old
+.wip
+coverage
+dist
+node_modules
+*.html
